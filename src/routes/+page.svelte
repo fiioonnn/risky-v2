@@ -540,12 +540,12 @@
 
 <div class="grid grid-cols-2 overflow-y-scroll h-screen">
 	<div class="text-white">
-		{gameState}
+		<!-- {gameState}
 		{levelCurrent}
 		{levelNext}
 		{levelPrev}
 		{levelCurrentIndex}
-		{jackpotBlink}
+		{jackpotBlink} -->
 	</div>
 	<div class="relative py-30">
 		<button
