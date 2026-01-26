@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 
 html {
-	background: url('background.jpg') no-repeat center center fixed;
+	background: url('background.jpg') no-repeat center center / cover;
 }
 
 @theme {

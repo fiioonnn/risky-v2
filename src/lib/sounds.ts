@@ -13,5 +13,6 @@ export const sounds = {
 	bigDown: new Howl({ src: ['/sounds/bigDown.mp3'], volume: 0.6 }),
 	fall: new Howl({ src: ['/sounds/fall.mp3'], volume: 0.8 }),
 	rise: new Howl({ src: ['/sounds/rise.mp3'], volume: 0.8 }),
-	gameOver: new Howl({ src: ['/sounds/gameOver.mp3'], volume: 0.5 })
+	gameOver: new Howl({ src: ['/sounds/gameOver.mp3'], volume: 0.5 }),
+	jackpot: new Howl({ src: ['/sounds/jackpot.mp3'], volume: 3 })
 };

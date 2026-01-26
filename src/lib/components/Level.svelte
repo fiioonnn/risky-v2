@@ -15,10 +15,12 @@
 </script>
 
 <div
-	class="relative"
+	class={['relative']}
 	style={`height: ${height ?? 50}px; width: ${width ?? 120}px; font-size: ${fontSize ?? 12}px;`}
 >
-	<div class="example size-full bg-linear-to-b from-[#C26C00] via-[#FFAF4A] to-[#843B00]"></div>
+	<div
+		class={['example size-full bg-linear-to-b from-[#C26C00] via-[#FFAF4A] to-[#843B00] ']}
+	></div>
 	<div
 		class={[
 			'bg-black absolute inset-1.5 inner',
