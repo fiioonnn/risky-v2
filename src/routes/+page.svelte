@@ -207,7 +207,7 @@
 
 		cooldownBet = true;
 
-		const isWin = true || getRandomBoolean();
+		const isWin = getRandomBoolean();
 
 		levelCurrent = isWin ? levelNext : levelPrev;
 		levelNext = -1;
@@ -374,13 +374,15 @@
 			animateIndexes = [];
 			sounds.soundtrack.play();
 
-			levelCurrent = getRandomBoolean()
-				? 400
-				: levels[
-						Math.floor(Math.random() * (levels.indexOf(8400) - levels.indexOf('PLAYOUT') - 1)) +
-							levels.indexOf('PLAYOUT') +
-							1
-					];
+			const roll = Math.random();
+			levelCurrent =
+				roll < 0.95
+					? 400
+					: levels[
+							Math.floor(Math.random() * (levels.indexOf(8400) - levels.indexOf('PLAYOUT') - 1)) +
+								levels.indexOf('PLAYOUT') +
+								1
+						];
 			updateLevel();
 		}
 	};
