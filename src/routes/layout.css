@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 
 html {
-	background: url('/risky/static/background.jpg') no-repeat center center / cover;
+	background: url('/risky/background.jpg') no-repeat center center / cover;
 }
 
 @theme {
