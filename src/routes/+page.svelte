@@ -124,8 +124,9 @@
 	};
 
 	// use crypto to create a function that returns a random boolean true / false but 50/50 chance
-	const getRandomBoolean = () => {
-		return crypto.getRandomValues(new Uint8Array(1))[0] > 127;
+	const getRandomBoolean = (probability = 0.5) => {
+		const r = crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32;
+		return r < probability;
 	};
 
 	const updateBalance = (amount: number) => {
@@ -207,7 +208,7 @@
 
 		cooldownBet = true;
 
-		const isWin = getRandomBoolean();
+		const isWin = getRandomBoolean(0.55);
 
 		levelCurrent = isWin ? levelNext : levelPrev;
 		levelNext = -1;
